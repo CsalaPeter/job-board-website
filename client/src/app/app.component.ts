@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Job } from './app.service';
+import { Job } from './job.model';
 import { Subscription } from 'rxjs';
 import { ConfigService } from './app.service';
 
@@ -10,7 +10,7 @@ import { ConfigService } from './app.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  job!: Job[];
+  jobs!: Job[];
   jobSubscription?: Subscription;
 
   constructor(private configService: ConfigService) {}
@@ -18,6 +18,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.jobSubscription = this.configService
       .getAllJobs()
-      .subscribe((job) => (this.job = job));
+      .subscribe((jobs) => ((this.jobs = jobs), console.log(this.jobs)));
   }
 }

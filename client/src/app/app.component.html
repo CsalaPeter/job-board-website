@@ -1,3 +1,32 @@
-<h1>Hello</h1>
-
-<router-outlet></router-outlet>
+<div class="jobs-list">
+  <div class="filters">
+    <span>Teszt</span>
+  </div>
+  <div class="jobs">
+    <div class="job-card" *ngFor="let job of jobs">
+      <header>
+        <div>
+          <h1 class="job-name">{{ job.jobName }}</h1>
+          <h4 class="company">{{ job.company }}</h4>
+          <h4 class="city">Miskolc</h4>
+        </div>
+        <div class="requirements">
+          <p class="language">Eng</p>
+          <p class="experience">0-3 years</p>
+          <p class="school">Diploma</p>
+        </div>
+      </header>
+      <section class="short-desc">
+        <p>
+          We are looking for an Accounts Administrator to manage our company’s
+          accounts payable and receivable. Accounts Administrator
+          responsibilities include reviewing and reconciling accounts,
+          processing payments to external partners and maintaining updated
+          records of invoices and receipts. To be successful in this role, you
+          should have a Finance or Accounting background and be familiar with
+          bookkeeping.
+        </p>
+      </section>
+    </div>
+  </div>
+</div>

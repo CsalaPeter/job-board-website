@@ -1,0 +1,40 @@
+.jobs-list {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 20px;
+  background-color: aqua;
+  width: 70vw;
+  margin-inline: 15vw;
+}
+
+.job-card {
+  background-color: bisque;
+  height: 250px;
+  border-radius: 20px;
+  width: 90%;
+  margin: 25px 0px 0px 25px;
+}
+
+.job-card header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filters {
+  background-color: royalblue;
+  height: 100%;
+}
+
+.job-name {
+  margin: 0px 0px 10px 20px;
+  padding-top: 10px;
+}
+
+.company,
+.city {
+  margin: 0px 0px 5px 20px;
+}
+
+.short-desc p {
+  margin-inline: 20px;
+}
